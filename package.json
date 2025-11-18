@@ -1,0 +1,202 @@
+{
+  "name": "run-conditions",
+  "module": "index.ts",
+  "type": "module",
+  "exports": {
+    "./which/core": {
+      "types": "./src/which-core-condition.d.ts",
+      "module-sync": "./src/core/is-module-sync.ts",
+      "node-addons": "./src/core/is-node-addons.ts",
+      "import": "./src/core/is-import.ts",
+      "require": "./src/core/is-require.ts",
+      "node": "./src/core/is-node.ts",
+      "default": "./src/core/is-default.ts"
+    },
+    "./which/common": {
+      "types": "./src/which-common-condition.d.ts",
+      "development": "./src/common/is-development.ts",
+      "production": "./src/common/is-production.ts",
+      "module": "./src/common/is-module.ts",
+      "browser": "./src/common/is-browser.ts",
+      "default": "./src/common/is-default.ts"
+    },
+    "./which/runtime": {
+      "types": "./src/which-runtime.d.ts",
+      "kiesel": "./src/runtime/is-kiesel.ts",
+      "wasmer": "./src/runtime/is-wasmer.ts",
+      "moddable": "./src/runtime/is-moddable.ts",
+      "lagon": "./src/runtime/is-lagon.ts",
+      "arvancloud": "./src/runtime/is-arvancloud.ts",
+      "azion": "./src/runtime/is-azion.ts",
+      "fastly": "./src/runtime/is-fastly.ts",
+      "edge-routine": "./src/runtime/is-edge-routine.ts",
+      "edge-light": "./src/runtime/is-edge-light.ts",
+      "react-server": "./src/runtime/is-react-server.ts",
+      "netlify": "./src/runtime/is-netlify.ts",
+      "workerd": "./src/runtime/is-workerd.ts",
+      "react-native": "./src/runtime/is-react-native.ts",
+      "electron": "./src/runtime/is-electron.ts",
+      "bun": "./src/runtime/is-bun.ts",
+      "deno": "./src/runtime/is-deno.ts",
+      "node": "./src/runtime/is-node.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./which/webpack": {
+      "types": "./src/which-webpack-target-environment.d.ts",
+      "worklet": "./src/webpack/is-worklet.ts",
+      "worker": "./src/webpack/is-worker.ts",
+      "react-native": "./src/webpack/is-react-native.ts",
+      "electron": "./src/webpack/is-electron.ts",
+      "deno": "./src/webpack/is-deno.ts",
+      "browser": "./src/webpack/is-browser.ts",
+      "node": "./src/webpack/is-node.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/module-sync": {
+      "types": "./src/can-reach.d.ts",
+      "module-sync": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/node-addons": {
+      "types": "./src/can-reach.d.ts",
+      "node-addons": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/import": {
+      "types": "./src/can-reach.d.ts",
+      "import": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/require": {
+      "types": "./src/can-reach.d.ts",
+      "require": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/development": {
+      "types": "./src/can-reach.d.ts",
+      "development": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/production": {
+      "types": "./src/can-reach.d.ts",
+      "production": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/module": {
+      "types": "./src/can-reach.d.ts",
+      "module": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/browser": {
+      "types": "./src/can-reach.d.ts",
+      "browser": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/kiesel": {
+      "types": "./src/can-reach.d.ts",
+      "kiesel": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/wasmer": {
+      "types": "./src/can-reach.d.ts",
+      "wasmer": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/moddable": {
+      "types": "./src/can-reach.d.ts",
+      "moddable": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/lagon": {
+      "types": "./src/can-reach.d.ts",
+      "lagon": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/arvancloud": {
+      "types": "./src/can-reach.d.ts",
+      "arvancloud": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/azion": {
+      "types": "./src/can-reach.d.ts",
+      "azion": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/fastly": {
+      "types": "./src/can-reach.d.ts",
+      "fastly": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/edge-routine": {
+      "types": "./src/can-reach.d.ts",
+      "edge-routine": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/edge-light": {
+      "types": "./src/can-reach.d.ts",
+      "edge-light": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/react-server": {
+      "types": "./src/can-reach.d.ts",
+      "react-server": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/netlify": {
+      "types": "./src/can-reach.d.ts",
+      "netlify": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/workerd": {
+      "types": "./src/can-reach.d.ts",
+      "workerd": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/react-native": {
+      "types": "./src/can-reach.d.ts",
+      "react-native": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/electron": {
+      "types": "./src/can-reach.d.ts",
+      "electron": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/bun": {
+      "types": "./src/can-reach.d.ts",
+      "bun": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/deno": {
+      "types": "./src/can-reach.d.ts",
+      "deno": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/worklet": {
+      "types": "./src/can-reach.d.ts",
+      "worklet": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/worker": {
+      "types": "./src/can-reach.d.ts",
+      "worker": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/node": {
+      "types": "./src/can-reach.d.ts",
+      "node": "./src/is.ts",
+      "default": "./src/is-not.ts"
+    },
+    "./can-reach/default": {
+      "types": "./src/can-reach.d.ts",
+      "default": "./src/is.ts"
+    },
+    "./get-all": "./src/get-all.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
