@@ -26,12 +26,25 @@ import { canReach as wasmer } from "detect-conditions/_internal/can-reach/wasmer
 import { canReach as worker } from "detect-conditions/_internal/can-reach/worker";
 import { canReach as workerd } from "detect-conditions/_internal/can-reach/workerd";
 import { canReach as worklet } from "detect-conditions/_internal/can-reach/worklet";
+import type {
+	CommonCondition,
+	CoreCondition,
+	JSRuntime,
+	WebpackTargetEnvironment,
+} from "./types";
 
-export function detect() {
-	const core = [];
-	const runtime = [];
-	const common = [];
-	const webpack = [];
+type DetectedConditions = {
+	core: CoreCondition[];
+	common: CommonCondition[];
+	runtime: JSRuntime[];
+	webpack: WebpackTargetEnvironment[];
+};
+
+export function detect(): DetectedConditions {
+	const core: CoreCondition[] = [];
+	const common: CommonCondition[] = [];
+	const runtime: JSRuntime[] = [];
+	const webpack: WebpackTargetEnvironment[] = [];
 
 	// Core conditions
 	if (moduleSync()) core.push("module-sync");

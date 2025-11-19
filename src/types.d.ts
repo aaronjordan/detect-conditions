@@ -2,7 +2,7 @@
  * Conditions implemented by Node.js at its core.
  * https://nodejs.org/api/packages.html#conditional-exports
  */
-type CoreCondition =
+export type CoreCondition =
 	| "import"
 	| "require"
 	| "node"
@@ -16,7 +16,7 @@ type CoreCondition =
  *
  * (We can't actually check for `types` as we need that for TS)
  */
-type CommonCondition =
+export type CommonCondition =
 	| "types"
 	| "browser"
 	| "development"
@@ -28,7 +28,7 @@ type CommonCondition =
  * A collection of conditions used by JS runtimes registered at
  * https://runtime-keys.proposal.wintercg.org/
  */
-type JSRuntime =
+export type JSRuntime =
 	| "edge-routine"
 	| "arvancloud"
 	| "azion"
@@ -52,7 +52,7 @@ type JSRuntime =
  *
  * https://webpack.js.org/guides/package-exports/#target-environment
  */
-type WebpackTargetEnvironment =
+export type WebpackTargetEnvironment =
 	| "browser"
 	| "electron"
 	| "worker"
@@ -60,47 +60,6 @@ type WebpackTargetEnvironment =
 	| "node"
 	| "deno"
 	| "react-native";
-
-/**
- * Returns the name of the most specific native Node.js import condition that
- * applies to the current entrypoint.
- *
- * https://nodejs.org/api/packages.html#conditional-exports
- */
-export type WhichCoreCondition = () => CoreCondition | "none";
-
-/**
- * Returns the name of the most specific common custom Node.js import condition
- * that applies to the current entrypoint.
- *
- * https://nodejs.org/api/packages.html#community-conditions-definitions
- */
-export type WhichCommonCondition = () => CommonCondition | "none";
-
-/**
- * Returns the name of the most specific runtime import condition that applies
- * to the current entrypoint.
- *
- * For instance, when running on Vercel Functions, this could return any of
- * `node`, `bun`, `react-server`, or even `edge-light` if using the
- * [Edge Runtime](https://vercel.com/docs/functions/runtimes/edge).
- */
-export type WhichRuntime = () => JSRuntime | "none";
-
-/**
- * Returns the name of the most specific Webpack target environment that was
- * used during compilation of this entrypoint.
- *
- * https://webpack.js.org/guides/package-exports/#target-environment
- */
-export type WhichWebpackTargetEnvironment = () =>
-	| WebpackTargetEnvironment
-	| "none";
-
-/**
- * Narrower function type used to simplify handling of "none" entries.
- */
-export type AnyNoneCondition = () => "none";
 
 /**
  * Returns `true` if this specific condition can _ever_ be reached by this entrypoint.
