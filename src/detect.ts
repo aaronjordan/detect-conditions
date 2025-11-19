@@ -1,7 +1,7 @@
-import { whichCondition as whichCommonCondition } from "detect-conditions/which/common";
-import { whichCondition as whichCoreCondition } from "detect-conditions/which/core";
-import { whichCondition as whichRuntime } from "detect-conditions/which/runtime";
-import { whichCondition as whichWebpackTargetEnvironment } from "detect-conditions/which/webpack";
+import { whichCondition as whichCommonCondition } from "detect-conditions/_internal/which/common";
+import { whichCondition as whichCoreCondition } from "detect-conditions/_internal/which/core";
+import { whichCondition as whichRuntime } from "detect-conditions/_internal/which/runtime";
+import { whichCondition as whichWebpackTargetEnvironment } from "detect-conditions/_internal/which/webpack";
 
 /**
  * Returns the most specific condition detected in each category.

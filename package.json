@@ -1,13 +1,13 @@
 {
 	"name": "detect-conditions",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A utility library for detecting JavaScript runtime environments and export conditions",
 	"author": "Aaron Jordan",
 	"license": "MIT",
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/aaronjordan/run-conditions.git"
+		"url": "https://github.com/aaronjordan/detect-conditions.git"
 	},
 	"keywords": [
 		"runtime",
@@ -46,7 +46,7 @@
 			"import": "./dist/assert.mjs",
 			"default": "./dist/assert.mjs"
 		},
-		"./which/core": {
+		"./_internal/which/core": {
 			"types": "./dist/which-core-condition.d.ts",
 			"module-sync": "./dist/core/is-module-sync.mjs",
 			"node-addons": "./dist/core/is-node-addons.mjs",
@@ -55,7 +55,7 @@
 			"node": "./dist/core/is-node.mjs",
 			"default": "./dist/core/is-default.mjs"
 		},
-		"./which/common": {
+		"./_internal/which/common": {
 			"types": "./dist/which-common-condition.d.ts",
 			"development": "./dist/common/is-development.mjs",
 			"production": "./dist/common/is-production.mjs",
@@ -63,7 +63,7 @@
 			"browser": "./dist/common/is-browser.mjs",
 			"default": "./dist/common/is-default.mjs"
 		},
-		"./which/runtime": {
+		"./_internal/which/runtime": {
 			"types": "./dist/which-runtime.d.ts",
 			"kiesel": "./dist/runtime/is-kiesel.mjs",
 			"wasmer": "./dist/runtime/is-wasmer.mjs",
@@ -84,7 +84,7 @@
 			"node": "./dist/runtime/is-node.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./which/webpack": {
+		"./_internal/which/webpack": {
 			"types": "./dist/which-webpack-target-environment.d.ts",
 			"worklet": "./dist/webpack/is-worklet.mjs",
 			"worker": "./dist/webpack/is-worker.mjs",
@@ -95,142 +95,142 @@
 			"node": "./dist/webpack/is-node.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/module-sync": {
+		"./_internal/can-reach/module-sync": {
 			"types": "./dist/can-reach.d.ts",
 			"module-sync": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/node-addons": {
+		"./_internal/can-reach/node-addons": {
 			"types": "./dist/can-reach.d.ts",
 			"node-addons": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/import": {
+		"./_internal/can-reach/import": {
 			"types": "./dist/can-reach.d.ts",
 			"import": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/require": {
+		"./_internal/can-reach/require": {
 			"types": "./dist/can-reach.d.ts",
 			"require": "./dist/is.js",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/development": {
+		"./_internal/can-reach/development": {
 			"types": "./dist/can-reach.d.ts",
 			"development": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/production": {
+		"./_internal/can-reach/production": {
 			"types": "./dist/can-reach.d.ts",
 			"production": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/module": {
+		"./_internal/can-reach/module": {
 			"types": "./dist/can-reach.d.ts",
 			"module": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/browser": {
+		"./_internal/can-reach/browser": {
 			"types": "./dist/can-reach.d.ts",
 			"browser": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/kiesel": {
+		"./_internal/can-reach/kiesel": {
 			"types": "./dist/can-reach.d.ts",
 			"kiesel": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/wasmer": {
+		"./_internal/can-reach/wasmer": {
 			"types": "./dist/can-reach.d.ts",
 			"wasmer": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/moddable": {
+		"./_internal/can-reach/moddable": {
 			"types": "./dist/can-reach.d.ts",
 			"moddable": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/lagon": {
+		"./_internal/can-reach/lagon": {
 			"types": "./dist/can-reach.d.ts",
 			"lagon": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/arvancloud": {
+		"./_internal/can-reach/arvancloud": {
 			"types": "./dist/can-reach.d.ts",
 			"arvancloud": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/azion": {
+		"./_internal/can-reach/azion": {
 			"types": "./dist/can-reach.d.ts",
 			"azion": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/fastly": {
+		"./_internal/can-reach/fastly": {
 			"types": "./dist/can-reach.d.ts",
 			"fastly": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/edge-routine": {
+		"./_internal/can-reach/edge-routine": {
 			"types": "./dist/can-reach.d.ts",
 			"edge-routine": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/edge-light": {
+		"./_internal/can-reach/edge-light": {
 			"types": "./dist/can-reach.d.ts",
 			"edge-light": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/react-server": {
+		"./_internal/can-reach/react-server": {
 			"types": "./dist/can-reach.d.ts",
 			"react-server": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/netlify": {
+		"./_internal/can-reach/netlify": {
 			"types": "./dist/can-reach.d.ts",
 			"netlify": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/workerd": {
+		"./_internal/can-reach/workerd": {
 			"types": "./dist/can-reach.d.ts",
 			"workerd": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/react-native": {
+		"./_internal/can-reach/react-native": {
 			"types": "./dist/can-reach.d.ts",
 			"react-native": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/electron": {
+		"./_internal/can-reach/electron": {
 			"types": "./dist/can-reach.d.ts",
 			"electron": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/bun": {
+		"./_internal/can-reach/bun": {
 			"types": "./dist/can-reach.d.ts",
 			"bun": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/deno": {
+		"./_internal/can-reach/deno": {
 			"types": "./dist/can-reach.d.ts",
 			"deno": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/worklet": {
+		"./_internal/can-reach/worklet": {
 			"types": "./dist/can-reach.d.ts",
 			"worklet": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/worker": {
+		"./_internal/can-reach/worker": {
 			"types": "./dist/can-reach.d.ts",
 			"worker": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/node": {
+		"./_internal/can-reach/node": {
 			"types": "./dist/can-reach.d.ts",
 			"node": "./dist/is.mjs",
 			"default": "./dist/is-not.mjs"
 		},
-		"./can-reach/default": {
+		"./_internal/can-reach/default": {
 			"types": "./dist/can-reach.d.ts",
 			"default": "./dist/is.mjs"
 		}
