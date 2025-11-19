@@ -1,4 +1,4 @@
-import type { JSRuntime, WhichRuntime } from "./types";
+import type { JSRuntime } from "./types";
 
 /**
  * Returns the name of the most specific runtime import condition that applies

@@ -20,6 +20,13 @@
     "deno",
     "bun"
   ],
+  "scripts": {
+    "build": "pkgroll",
+    "ci": "biome ci",
+    "check": "biome check --write",
+    "format": "biome format --write",
+    "lint": "biome lint --write"
+  },
   "files": [
     "dist"
   ],
@@ -228,17 +235,13 @@
       "default": "./dist/is.mjs"
     }
   },
-  "dependencies": {
-    "detect-conditions": "*"
-  },
   "devDependencies": {
     "@types/bun": "latest",
-    "pkgroll": "^2.20.1"
-  },
-  "scripts": {
-    "build": "pkgroll"
-  },
-  "peerDependencies": {
+    "biome": "^0.3.3",
+    "pkgroll": "^2.20.1",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "detect-conditions": "*"
   }
 }

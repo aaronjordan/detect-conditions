@@ -1,7 +1,4 @@
-import type {
-  WebpackTargetEnvironment,
-  WhichWebpackTargetEnvironment,
-} from "./types";
+import type { WebpackTargetEnvironment } from "./types";
 
 /**
  * Returns the name of the most specific Webpack target environment that was
