@@ -1,6 +1,6 @@
 {
 	"name": "detect-conditions",
-	"version": "0.1.4",
+	"version": "1.0.0",
 	"description": "A utility library for detecting JavaScript runtime environments and export conditions",
 	"author": "Aaron Jordan",
 	"license": "MIT",
@@ -26,6 +26,7 @@
 		"check": "biome check --write .",
 		"format": "biome format --write .",
 		"lint": "biome lint --write .",
+		"release": "sh/release.sh",
 		"test-bun": "bun test tests/bun/*",
 		"test-node": "npx vitest run --dir tests/node"
 	},
